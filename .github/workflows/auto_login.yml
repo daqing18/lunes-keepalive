@@ -1,15 +1,16 @@
 name: Lunes Host Auto Keepalive
 
 on:
-  schedule:
-    - cron: '0 1 */10 * *'  # Daily at 02:00 UTC
+  #schedule:
+  #  - cron: '0 1 */10 * *'  # Daily at 02:00 UTC
   workflow_dispatch:      # Manual trigger
 
 jobs:
   auto-login:
+    name: 🔄 执行登陆
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: 📥 拉取代码
         uses: actions/checkout@v4
         
       - name: Set up Python
