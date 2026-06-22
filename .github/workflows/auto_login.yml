@@ -1,8 +1,8 @@
 name: Lunes Host Auto Keepalive
 
 on:
-  #schedule:
-  #  - cron: '0 1 */10 * *'  # Daily at 02:00 UTC
+  schedule:
+    - cron: '15 8 1,11,21 * *'  # 每月1号,11号,21号的 08:15 UTC
   workflow_dispatch:      # Manual trigger
 
 jobs:
